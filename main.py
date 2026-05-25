@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Capital Rotation — Industry-Level Capital Rotation Tracker
+SmartMoney — Industry-Level Capital Rotation Tracker
 
 Ranks industries within each sector by capital rotation intensity,
 detects anomalous rotation changes, and generates an interactive HTML report.
@@ -20,20 +20,20 @@ import logging
 import sys
 from pathlib import Path
 
-from capital_rotation.config import RotationConfig
-from capital_rotation.taxonomy import (
+from smartmoney.config import RotationConfig
+from smartmoney.taxonomy import (
     TAXONOMY, SECTOR_ETFS, load_custom_taxonomy,
     get_all_tickers,
 )
-from capital_rotation.data import fetch_ohlcv_batch, compute_weekly_ohlcv
-from capital_rotation.rotation import (
+from smartmoney.data import fetch_ohlcv_batch, compute_weekly_ohlcv
+from smartmoney.rotation import (
     calc_stock_rotation,
     calc_industry_rotation,
     rank_industries,
     get_stock_detail,
     calc_rotation_anomalies,
 )
-from capital_rotation.report import generate_report
+from smartmoney.report import generate_report
 
 logging.basicConfig(
     level=logging.INFO,
