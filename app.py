@@ -1020,8 +1020,7 @@ def build_ai_heatmap(ai_sector_results, combined_ranking, layers_config=None):
         ],
         zmid=0, zmin=-1, zmax=1,
         colorbar=dict(
-            title="Rotation",
-            titleside="right",
+            title=dict(text="Rotation", side="right"),
             tickvals=[-1, -0.5, 0, 0.5, 1],
             ticktext=["-1.0", "-0.5", "0", "+0.5", "+1.0"],
             len=0.5, thickness=12,
