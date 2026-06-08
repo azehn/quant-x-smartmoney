@@ -2,9 +2,15 @@
   "version": "0.0.1",
   "configurations": [
     {
+      "name": "streamlit-dashboard",
+      "runtimeExecutable": "uv",
+      "runtimeArgs": ["run", "streamlit", "run", "app.py", "--server.port", "8501"],
+      "port": 8501
+    },
+    {
       "name": "report-preview",
-      "runtimeExecutable": "/opt/anaconda3/bin/python",
-      "runtimeArgs": ["-m", "http.server", "8766"],
+      "runtimeExecutable": "uv",
+      "runtimeArgs": ["run", "python", "-m", "http.server", "8766"],
       "port": 8766
     }
   ]

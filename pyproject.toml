@@ -1,0 +1,17 @@
+[project]
+name = "quant-x-smartmoney"
+version = "0.1.0"
+description = "SmartMoney capital rotation dashboard and report generator."
+requires-python = ">=3.12"
+dependencies = [
+    "streamlit>=1.30.0",
+    "pandas>=2.0.0,<2.4.0",
+    "numpy>=1.24.0",
+    "yfinance>=0.2.31",
+    "plotly>=5.18.0",
+    "pyarrow>=14.0.0",
+    "pyyaml>=6.0",
+]
+
+[tool.uv]
+package = false

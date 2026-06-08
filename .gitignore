@@ -1,4 +1,5 @@
 .cache/
+.venv/
 __pycache__/
 *.pyc
 capital_rotation_report.html

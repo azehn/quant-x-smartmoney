@@ -18,6 +18,11 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
 
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v6
+        with:
+          enable-cache: true
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
@@ -25,15 +30,15 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install -r requirements.txt
+          uv sync --locked
 
       - name: Run prefetch script
         run: |
-          python scripts/prefetch_data.py
+          uv run python scripts/prefetch_data.py
 
       - name: Validate cache
         run: |
-          python -c "
+          uv run python -c "
           import pickle, sys
           with open('data/cache.pkl', 'rb') as f:
               data = pickle.load(f)
