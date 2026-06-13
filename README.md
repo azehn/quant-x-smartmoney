@@ -27,6 +27,14 @@ Run the Streamlit dashboard:
 uv run streamlit run app.py
 ```
 
+`uv run` automatically uses the project `.venv`. If you prefer to activate the
+environment explicitly in your shell, you can run:
+
+```bash
+source .venv/bin/activate
+streamlit run app.py
+```
+
 Open:
 
 ```text
