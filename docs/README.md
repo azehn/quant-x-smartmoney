@@ -17,7 +17,7 @@ agents to reconstruct the full chat history.
 
 ## How Future Agents Should Use These Docs
 
-1. Read `README.md` and `CLAUDE.md` at the repository root.
+1. Read README.md, AGENTS.md, and CLAUDE.md when applicable.
 2. Read the latest roadmap in `docs/plans/`.
 3. Read relevant ADRs in `docs/adr/` before making architecture changes.
 4. Add a short worklog entry when completing a meaningful milestone.

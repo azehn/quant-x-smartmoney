@@ -2,7 +2,15 @@
 .venv/
 .cache/
 __pycache__/
+node_modules/
+
+# Python and tool caches
 *.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+coverage.xml
 
 # Large or generated data artifacts
 data/cache.pkl
@@ -10,12 +18,18 @@ data/cache.pkl
 *.parquet
 *.feather
 *.arrow
+*.csv
+*.jsonl
+*.sqlite
+*.db
 
 # Generated reports and build outputs
 capital_rotation_report.html
-*.html
 dist/
 build/
+coverage/
+target/
+tmp/
 
 # Dependency lockfiles are useful for installs, but noisy for agent context.
 # Keep tracked in git; ignore only for Codex context loading.
@@ -23,24 +37,4 @@ uv.lock
 
 # Tool and OS noise
 .DS_Store
-.pytest_cache/
-.mypy_cache/
-.ruff_cache/
-.coverage
-coverage.xml
-
-# Others
-node_modules/
-dist/
-build/
-coverage/
-.venv/
-target/
 *.log
-*.csv
-*.jsonl
-*.parquet
-*.sqlite
-*.db
-tmp/
-.cache/
